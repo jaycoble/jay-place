@@ -1,5 +1,9 @@
 /* Basic Styling */
 
+:root{
+  --mainText: black;
+}
+
 html { margin: 0; padding: 0; background: #223127ff; font-size: 12;
 }
 
@@ -10,7 +14,6 @@ html { margin: 0; padding: 0; background: #223127ff; font-size: 12;
 }
 
 #welcome-section {
-  background: ;
   padding: 5rem;
   padding-bottom: 0rem; 
   overflow-y:auto;
@@ -19,7 +22,7 @@ html { margin: 0; padding: 0; background: #223127ff; font-size: 12;
 }
 
 #welcome-title{
-  text-align:
+
 }
 
 .center {
@@ -32,7 +35,6 @@ html { margin: 0; padding: 0; background: #223127ff; font-size: 12;
 
 #profile-link:hover{
   background-color: #ff4f00;
-  margin: ;
   transition: background 0.3s ease-out;
 } 
 /* Custom properties/variables  */
