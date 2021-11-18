@@ -3,6 +3,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const express = require('express');
+const path = require('path')
 const session = require('express-session');
 const ExpressError = require('./utilities/ExpressError');
 const ejsMate = require('ejs-mate');
