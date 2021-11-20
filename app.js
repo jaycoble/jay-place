@@ -19,11 +19,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('public', path.join(__dirname, 'public'))
 
 app.use(helmet());
+app.use(express.static("public"));
 
 const secret = process.env.SECRET;
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index.ejs')
 })
 
 // Start the server
@@ -32,5 +33,3 @@ app.listen(port, () => {
     console.log(`App listening on port ${port}`);
     console.log('Press Ctrl+C to quit.');
 });
-
-module.exports = app;
