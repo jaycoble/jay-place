@@ -13,10 +13,11 @@ const helmet = require('helmet');
 
 const app = express();
 
-app.engine('ejs', ejsMate)
-app.set('view engine', 'ejs');
+app.engine('ejs', ejsMate);
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
-app.set('public', path.join(__dirname, 'public'))
+app.set('public', path.join(__dirname, 'public'));
 
 app.use(helmet());
 app.use(express.json())
@@ -25,7 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const secret = process.env.SECRET;
 
 app.get('/', (req, res) => {
-    res.render('home.ejs')
+    res.render('index.html')
 })
 
 // Start the server
